@@ -1,5 +1,6 @@
 # =============================================================================
-# PROGRAMMING FUNDAMENTALS — Assignment 1
+# -----------------------------------------------------------------------------
+# EXPECT# PROGRAMMING FUNDAMENTALS — Assignment 1
 # Topic: Conditional Logic, Loops, and Functions
 # =============================================================================
 #
@@ -10,8 +11,7 @@
 # A prime number is a whole number greater than 1 that has no divisors
 # other than 1 and itself (e.g., 2, 3, 5, 7, 11, 13 ...).
 #
-# -----------------------------------------------------------------------------
-# EXPECTED INPUT / OUTPUT EXAMPLES
+# INPUT / OUTPUT EXAMPLES
 # -----------------------------------------------------------------------------
 #
 #   Enter a number: 7
@@ -35,3 +35,25 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+
+
+def is_prime(number):
+
+    if number < 2:
+        return False
+
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            return False
+
+    return True
+
+
+
+
+num = int(input("Enter any number: "))
+
+if is_prime(num):
+    print(f"{num} is a prime number.")
+else:
+    print(f"{num} is NOT a prime number.")
